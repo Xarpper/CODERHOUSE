@@ -1,58 +1,90 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap');
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0px;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box; /* funcion para normalizar*/
-    flex-wrap: wrap;
 }
-header{
-    width: 100%;
-}
-header nav{
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-weight: bold;
-    background-color: black;
-    width: 100%;
-    height: 9%;
-    align-items: center;
-}
-.titulo{
-    color: white;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 40px;
-    padding-left: 20px;
-    
-}
-.titulo:hover{
-    color: purple;
+body{
+    font-family: 'Roboto', sans-serif;
+    padding: 70px 0px 0px;
+
 }
 
-header nav ul li{
-    display: inline-block;
-    padding: 0px 20px;
+/*!-------------INICIO NAV BAR -------------*/
+header{
+    background-color: black;
+    height: 70px;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
 }
-header nav ul li a{
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    text-decoration: none;
     color: white;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.nav ul li a{
     text-decoration: none;
     list-style: none;
+    color: white;
+    padding: 8px;
+}
+
+.nav ul li a:hover{
+    color: purple;
+    transition: 0.5s;
 }
 
 
-/*! INDEX */
-.responsive{
+.logo h1{
+    font-family: 'Bebas Neue', sans-serif;  
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 70px;
+    color: white;
+    text-decoration: none;
+}
+.logo h1:hover{
+    color: purple;
+    transition: 0.5s;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style:none;
+
+}
+.nav-menu-item{
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 70px;
+    text-transform: uppercase;
+    width: max-content;
+
+}
+.nav-toggle{
+    color: white;
+    background: none;
+    border: none;
+    font-size: 15px;
+    padding: 0 20px;
+    line-height: 20px;
     display: none;
 }
-.rspnhero {
-    display: none;
-}
+/*!-------------FINAL NAV BAR -------------*/
+/*!-------------INICIO INDEX -------------*/
 .hero{
     background-image: url("../images/fondo.jpg");
-    padding-top: 100px;
     width: 100%;
     height: 500px;
     background-repeat: no-repeat;
@@ -77,9 +109,6 @@ header nav ul li a{
 
 
 }
-.hero-mobile {
-    display: none;
-}
 .divisor{
     background-color: black;
     width: 100%;
@@ -88,7 +117,7 @@ header nav ul li a{
     justify-content: space-around;
     text-align: center;
     flex-direction: column;
-    box-shadow: 4px 5px 14px -2px rgba(0,0,0,0.75);
+
 
 }
 .divisor h3{
@@ -96,8 +125,10 @@ header nav ul li a{
     justify-content: space-around;
     text-align: center;
     color: white;
-    font-size: 2Rem;
-    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30px;
+}
+.divisor:hover{
+    color: purple;
 }
 .producto{
     width: 100%;
@@ -135,6 +166,7 @@ header nav ul li a{
 }
 
 .form-consultas-index {
+    height: 450px;
     margin: 2% 2%;
     width: 30%;
     background: white;
@@ -185,8 +217,7 @@ header nav ul li a{
   .impresion-index{
     border-radius: 10px;
     background-image: url("../images/fondo.jpg");
-    padding-top: -5%;
-    padding-bottom: 11.5%; 
+    height: 450px;
     width: 60%; 
     background-repeat: no-repeat;
     background-size: cover;
@@ -238,7 +269,6 @@ header nav ul li a{
     height: 40px;
     text-decoration: none;
     border-radius: 15px;
-    margin-bottom: 10px;
     
 }
 
@@ -255,7 +285,7 @@ header nav ul li a{
     border-radius:30%;
     position: fixed;
     bottom: 60px;
-    right: 20px;
+    right: 10px;
 }
 .wpp a{
     margin-top: 5px;
@@ -273,32 +303,46 @@ header nav ul li a{
     color: white;
     margin-right: 20px;
 }
-/*! Pagina Productos*/
+/*!-------------FINAL INDEX -------------*/
+
+/*!-------------INICIO PRODUCTOS -------------*/
 .productos{
-    padding-top: 4%;
+    padding-top: 5%;
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+
+
 }
 .productos-side{
+    height: 50%;
     grid-area: side;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     background-color: rgb(201,201,201);
-    width: 20%;
-    height: 100%;
-    text-decoration: none;
+
+ 
+}
+.productos-side h3{
+    background-color: rgb(201,201,201);
     color: rgb(85, 81, 81);
+    text-decoration: none;
+}
+.productos-side a{
+    background-color: rgb(201,201,201);
+    color: rgb(85, 81, 81);
+    text-decoration: none;
 }
 .producto-content{
+    width: 70%;
     display: grid;
     grid-template-areas: 'side prod1 prod2 prod3 prod4'
                          'side prod5 prod6 prod7 prod8';
-    gap: 2%;
+    gap: 4%;
 
 
 }
@@ -351,7 +395,10 @@ header nav ul li a{
 }
 /*!---------------GRIDS---------------*/
 
-    /*! Pagina servicios */
+/*!-------------FINAL PRODUCTOS -------------*/
+
+/*!-------------INICIO SERVICIOS -------------*/
+
 .impresion{
     background-image: url("../images/fondo.jpg");
     padding-top: 9%;
@@ -392,27 +439,7 @@ header nav ul li a{
     border-radius: 10PX;
     font-family: 'Bebas Neue', sans-serif;
 }
-.divisor2{
-    background-color: black;
-    width: 100%;
-    height: 70px;
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    flex-direction: column;
 
-
-}
-.divisor2 h3{
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    color: white;
-    font-size: 30px;
-}
-.divisor2:hover{
-    color: purple;
-}
 .pasos{
     display: flex;
     justify-content: center;
@@ -487,9 +514,12 @@ header nav ul li a{
     color: black;
     text-decoration: underline;
   }
-  
-/*! Pagina Perfil*/ 
-.subtitulo{
+
+  /*!-------------FINAL SERVICIOS -------------*/
+
+  /*!-------------INICIO PERFIL -------------*/
+
+  .subtitulo{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -624,61 +654,59 @@ header nav ul li a{
     text-decoration: none;
     color: black;
 }
+  /*!-------------FINAL PERFIL -------------*/
 
-/*! MEDIA QUERY */
-@media screen and (max-width: 600px) {
-    header nav ul li {
-        display: none;
-    }
-    .responsive {
-        text-decoration: none;
-        list-style: none;
-        display: flex;
-        color: white;
-        margin-right: 1.5%;
 
+@media (max-width: 768px) {
+    body{
+        padding-top: 39px   ;
+    
     }
-    .responsive a {
-        text-decoration: none;
-        list-style: none;
-        color: white;
-    }
-    .rspnhero{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-        background-color: rgb(37, 211, 102);
-        color: white;
-        font-size: 1rem;
-        width: 100px;
-        height: 25px;
-        border-radius: 10PX;
-        font-family: 'Bebas Neue', sans-serif;
-    }
-    .wpp{
-        display: none;
-    }
-    .hero {
-        height: 50%;
-        align-items: center;
-    }
-    .hero p {
-        display: none;
-    }
-    .producto div {
-        width: 70%;
-        margin-top: 40px;
-    }
-
-    .divisor {
-        height: 30px;
-    }
-    .divisor h3 {
-        font-size: 1rem;
-    }
-    .producto{
-        flex-direction: column;
+    header{
+        height: 40px;
     }
     
+    
+    .logo h1{
+        font-family: 'Bebas Neue', sans-serif;  
+        font-size: 20px;
+        font-weight: bold;
+        padding: 0 40px;
+        line-height: 30px;
+        color: white;
+        text-decoration: none;
+    }
+    .logo h1:hover{
+        color: purple;
+        transition: 0.5s;
+    }
+    
+    .nav-menu{
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        background-color: black;
+        position: fixed;
+        left: 0;
+        top: 40px;
+        width: 100%;
+        padding: 20px 0;
+        left: 100%;
+        transition: left 0,3s;
+    }
+    .nav-menu-item{
+        font-size: 18px;
+    
+    }
+    .nav-toggle{
+        display: block  ;
+    }
+    .nav-menu_visible{
+        left: 0;
+
+    }
 }
+
+
+
+
